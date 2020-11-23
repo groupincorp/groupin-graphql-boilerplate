@@ -1,0 +1,14 @@
+type Query {
+  testing: Testing
+  users: [User]
+}
+
+type Testing {
+  version: String
+  name: String
+}
+
+type User {
+  id: Int!
+  name: String
+}

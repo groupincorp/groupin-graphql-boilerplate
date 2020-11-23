@@ -1,0 +1,37 @@
+{
+  "name": "groupin-graphql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon --watch src src/index.ts --exec babel-node --extensions=\".ts,.js\" -e js,ts,gql",
+    "build": "babel src/schema -d dist/schema --copy-files && babel src -d dist --extensions=\".ts,.js\"",
+    "start": "node dist/index.js",
+    "table": "ts-node framework/generate_table_cli.ts",
+    "graph": "ts-node framework/generate_graph_type.ts"
+  },
+  "dependencies": {
+    "@babel/node": "^7.12.6",
+    "@babel/plugin-proposal-async-generator-functions": "^7.12.1",
+    "@babel/plugin-proposal-optional-chaining": "^7.10.3",
+    "@babel/polyfill": "^7.12.1",
+    "apollo-server": "^2.19.0",
+    "dataloader": "^1.4.0",
+    "dotenv": "^8.2.0",
+    "fs": "^0.0.1-security",
+    "graphql": "^15.4.0",
+    "nodemon": "^2.0.6",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.1.2",
+    "mysql2": "^1.6.5",
+    "knex": "^0.19.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-export-default-from": "^7.2.0",
+    "@babel/preset-env": "^7.4.1",
+    "@babel/preset-typescript": "^7.3.3"
+  }
+}
